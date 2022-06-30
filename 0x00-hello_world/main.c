@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * This is my first C project on ALX
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
 */
 int main(void)
 {
