@@ -13,7 +13,7 @@ int main(void)
 {
 	char val[100];
 
-	strcpy(val, "Programming is like building a multilingual puzzle\n");
+	strcpy(val, "\"Programming is like building a multilingual puzzle\n");
 
 	puts(val);
 	return (0);
