@@ -12,10 +12,13 @@
 int main(void)
 {
 	char val[100];
+	char val2[5];
 
-	strcpy(val, "\"Programming is like building a multilingual puzzle\n");
+	strcpy(val, "\"Programming is like building a multilingual puzzle");
+	strcpy(val2, "\n");
 
 	puts(val);
+	puts(val2);
 	return (0);
 }
 
