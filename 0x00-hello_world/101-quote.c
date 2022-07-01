@@ -7,10 +7,9 @@
  */
 int main(void)
 {
-	char val[100];
+	char val[100] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-	val = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-
-	fprintf(stderr, "%s", val);
+	fprintf(stderr, "%s\n", val);
+	return (1);
 }
 
