@@ -1,18 +1,21 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - Entry point
- * 
+ *
  * Return: always 0 (success)
  *
  */
 
 int main(void)
 {
-	_putchar('c');
-	_putchar('o');
-	_putchar('p');
-	_putchar('\n');
+	int i = 0;
+	char ptch[8] = "_putchar";
+
+	do {
+		_putchar(ptch[i]);
+		i++;
+	} while (i < 8);
 	return (0);
 }
 
