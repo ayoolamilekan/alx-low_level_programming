@@ -1,12 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - Start
+ * print_alphabet - func
  *
- * Return: success 0
+ *
+ *
+ *
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i = 0;
+	char alphabets[26] = "abcdefghijklmnopqrstuvwxyz";
+
+	do {
+		_putchar(alphabets[i]);
+		i++;
+	} while (i < 26);
+	_putchar('\n');
 }

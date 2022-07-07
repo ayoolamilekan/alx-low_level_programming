@@ -16,6 +16,7 @@ int main(void)
 		_putchar(ptch[i]);
 		i++;
 	} while (i < 8);
+	_putchar('\n');
 	return (0);
 }
 
