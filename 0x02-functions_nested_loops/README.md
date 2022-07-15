@@ -1,3 +1,1 @@
-# THIS FOLDER IS ON FUNCTIONS AND LOOPS
-
-This covers functions and lists in C
+I am a sure success always

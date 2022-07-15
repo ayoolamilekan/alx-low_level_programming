@@ -1,15 +1,15 @@
+
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 /**
- * main - Entry point
- *
- * Return: always 0 (success)
+ *  * main -Entry point
+ *   * Description: 'A new project abot using puts with special symbols'
+ *    * Return: Always 1 (success)
  */
 int main(void)
 {
-	char val[100] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 
-	fprintf(stderr, "%s\n", val);
 	return (1);
 }
-

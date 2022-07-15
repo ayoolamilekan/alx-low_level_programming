@@ -1,2 +1,2 @@
-# alx-low_level_programming
-ALX C programming
+This is for low-level programming in C
+

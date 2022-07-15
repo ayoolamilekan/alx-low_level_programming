@@ -1,22 +1,18 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_alphabet - func
- *
- *
- *
- *
+ *  *print_alphabet - Alphabet in lowercase
+ *   *
+ *    *Return:0
+ *     *
  */
-
 void print_alphabet(void)
 {
-	int i = 0;
-	char alphabets[26] = "abcdefghijklmnopqrstuvwxyz";
+	char r;
 
-	do {
-		_putchar(alphabets[i]);
-		i++;
-	} while (i < 26);
+	for (r = 'a'; r <= 'z'; r++)
+	{
+		_putchar(r);
+	}
 	_putchar('\n');
 }

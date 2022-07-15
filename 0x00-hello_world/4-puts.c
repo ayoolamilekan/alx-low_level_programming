@@ -1,21 +1,15 @@
 #include <stdio.h>
 #include <string.h>
+
 /**
- * main - entry point
- *
- * char - declare char array
- * initialize the array
- *
- * display string
- * Return: always 0 (success)
+ *  * main - Entry point
+ *   *
+ *    * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char val[100];
+	puts("\"Programming is like building a multilingual puzzle");
 
-	strcpy(val, "\"Programming is like building a multilingual puzzle");
-
-	puts(val);
 	return (0);
 }
-

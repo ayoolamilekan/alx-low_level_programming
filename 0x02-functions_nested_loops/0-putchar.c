@@ -1,22 +1,17 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: always 0 (success)
- *
+ *  * main - Entry point
+ *   *
+ *    * Return: always 0(Success)
  */
-
 int main(void)
 {
-	int i = 0;
-	char ptch[8] = "_putchar";
+	char str[] = "_putchar";
+	int ch;
 
-	do {
-		_putchar(ptch[i]);
-		i++;
-	} while (i < 8);
+	for (ch = 0; ch < 8; ++ch)
+		_putchar(str[ch]);
 	_putchar('\n');
+
 	return (0);
 }
-
