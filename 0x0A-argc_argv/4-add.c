@@ -22,25 +22,21 @@ int main(int argc, char **argv)
 	int sum, i;
 
 	/*initlz variables*/
-	if (argc < 2)
-		printf("0\n");
-	else
+	if (argc >= 2)
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			printf("before check");
-			if (isdigit(argv[i]))
+			if (atoi(argv[i]) != 0)
 			{
-				printf("is a digit");
 				sum += atoi(argv[i]);
-				printf("added success");
 			}
 			else
 			{
-				printf("Error");
+				printf("Error\n");
 				return (0);
 			}
 		}
 	}
+	printf("%d\n", sum);
 	return (0);
 }
