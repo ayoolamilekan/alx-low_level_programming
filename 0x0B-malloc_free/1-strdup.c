@@ -27,8 +27,10 @@ char *_strdup(char *str)
 	size_t i;
 
 	/*assigns memspace using length of given string*/
+	if (str == NULL)
+		return (NULL);
 	ret = malloc(sizeof(char) * strlen(str));
-	if (ret == NULL || str == NULL)
+	if (ret == NULL)
 		return (NULL);
 
 	i = 0;
