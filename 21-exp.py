@@ -17,52 +17,11 @@ from random import randint
 import numpy as np
 
 if __name__ == "__main__":
-
     choices = {'A':0, 'B':0, 'C':0}
     x = [1,2,3]
     randseed = 0
     opened = ''
-
-    gamechoice()
-
-    print("This is the gameshow problem\nyou have three choices -> A -- B -- C")
-    choice = input("make your choice player: ")
-
-    gamehost(1, 0)
-    reask = input(f"choice {opened} is wrong, do you want to change your choice\nEnter y/n")
-    if reask == y:
-        gamehost(0,1)
-    else:
-        gamehost(0,0)
-
-    if choices[choice] == 1:
-        print('you won the gameshow!')
-    #gamehost function
-    def gamehost(op, sw):
-        """
-        this manages and recieves calls from the player
-        """
-        if op == 1:
-            open_wrong()
-        elif sw == 1:
-            switch_choice()
-
-        def update_choices():
-            if opened != '':
-                choices.pop(opened)
-                
-        def open_wrong():
-            for k in choices.keys():
-                if choices[k] != 1:
-                    opened = k
-
-        def switch_choice():
-            update_choices()
-            if choice == choices.keys()[0]:
-                choice = choices.keys()[1]
-            elif choice == choices.keys()[1]:
-                choice = choices.keys()[0]
-            return choice    
+    choice = ''
 
     #gamechoice function
     def gamechoice():
@@ -77,5 +36,56 @@ if __name__ == "__main__":
 
             idx = 0
             for k in choices.keys():
-                doors[k] = x[idx]
+                choices[k] = x[idx]
                 idx += 1
+
+        #shuffle choices
+        shuffle_choices()
+
+    #gamehost function
+    def gamehost(op, sw):
+        """
+        this manages and recieves calls from the player
+        """
+        def update_choices(opened):
+            if opened != '':
+                choices.pop(opened)
+                print(f"updated --> {choices}")
+        def open_wrong(choices):
+            for k in choices.keys():
+                if choices[k] != 1:
+                    opened = k
+            print(opened)
+            return opened
+
+        def switch_choice(loc_choice):
+            update_choices(opened)
+            if loc_choice == list(choices.keys())[0]:
+                loc_choice = list(choices.keys())[1]
+            elif loc_choice == list(choices.keys())[1]:
+                loc_choice = list(choices.keys())[0]
+            return loc_choice    
+        if op == 1:
+            opened = open_wrong(choices)
+        elif sw == 1:
+            switch_choice(choice)
+
+
+    #program main body
+    gamechoice()
+    print("This is the gameshow problem\nyou have three choices -> A -- B -- C")
+    choice = input("make your choice player: ")
+
+    gamehost(1, 0)
+    reask = input(f"choice {opened} is wrong, do you want to change your choice\nEnter y/n: ")
+    if reask == "y":
+        gamehost(0,1)
+    else:
+        gamehost(0,0)
+
+    if choices[choice] == 1:
+        print('you won the game!')
+        print(choices, choice)
+    else:
+        print('you lost the game!')
+        print(choices)
